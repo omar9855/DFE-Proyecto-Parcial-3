@@ -1,0 +1,23 @@
+<h1 class="text-xl text-center mb-[20px] font-semibold">
+  Lista de ventas realizadas
+</h1>
+<div class="flex flex-col items-center">
+  <div class="w-full mb-[3rem] flex flex-col items-center">
+    <app-summary
+      [data]="data"
+      [precioTotal]="precioTotal"
+      [productosVendidos]="productosVendidos"
+    ></app-summary>
+  </div>
+  <div class="mb-[3rem]">
+    <app-product-list
+      [data]="data"
+      (deleteSale)="deleteSale($event)"
+      (cantidadProductosVendido)="cantidadProductosVendido()"
+    ></app-product-list>
+  </div>
+</div>
+<app-modal
+  *ngIf="hasDeleted"
+  [message]="'Venta eliminada correctamente'"
+></app-modal>

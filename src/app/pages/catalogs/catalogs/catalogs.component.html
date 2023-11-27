@@ -1,0 +1,10 @@
+<h1 class="contenedor text-xl font-semibold text-center mb-[20px]">
+  Nuestros Productos
+</h1>
+<div class="w-full px-[5rem]">
+  <app-product [products]="products" (saleAdded)="saleAdded()"></app-product>
+  <app-modal
+    *ngIf="hasSend"
+    [message]="'Compra realizada correctamente!'"
+  ></app-modal>
+</div>

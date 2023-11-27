@@ -1,0 +1,16 @@
+<div
+  class="w-[500px] h-[200px] bg-gray-300 flex flex-col items-center justify-center border border-black border-top-2 border-bottom-2 border-left-2 border-right-2"
+>
+  <h1 class="titulo font-semibold">Resumen de ventas realizadas</h1>
+  <div>
+    <div>
+      <slot class="font-semibold">Cantidad de productos vendidos:</slot>
+      {{ productosVendidos }}
+    </div>
+    <div>
+      <slot class="font-semibold">Total de venta: </slot>${{
+        precioTotal
+      }}
+    </div>
+  </div>
+</div>
